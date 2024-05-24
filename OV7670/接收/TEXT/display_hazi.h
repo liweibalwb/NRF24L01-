@@ -1,0 +1,28 @@
+#ifndef __DISPLAY_HAZI_H__
+#define __DISPLAY_HAZI_H__	 
+
+#include	"main.h"
+//////////////////////////////////////////////////////////////////////////////////	 
+//本程序只供学习使用，未经作者许可，不得用于其它任何用途
+//Mini STM32开发板
+//文本显示程序 驱动代码		   
+//正点原子@ALIENTEK
+//技术论坛:www.openedv.com
+//修改日期:2010/5/23 
+//版本：V1.0
+//版权所有，盗版必究。
+//Copyright(C) 正点原子 2009-2019
+//All rights reserved
+//////////////////////////////////////////////////////////////////////////////////	 
+
+					     
+void Get_HzMat(unsigned char *code,unsigned char *mat,u8 size);//得到汉字的点阵码
+void Show_Font(u16 x,u16 y,u16 color,u8 *font,u8 size,u8 mode);
+void Show_Str(u16 x,u16 y,u16 color,u8*str,u8 size,u8 mode);//在指定位置显示一个字符串 
+void Show_Str_Mid(u16 x,u16 y,u16 color ,u8*str,u8 size,u8 len);
+//void Show_PTStr(u16 x,u16 y,u8*str,u8 size,u8 mode,u8 len,u16 offx);//显示部分字符
+//void Str_Scroll(u16 x,u16 y,u8*str,u8 size,u8 mode,u8 len,u8 start);//滚动字符串
+void my_stradd(u8*str1,u8*str2);//将str2与str1相加,结果保存在str1
+
+
+#endif
